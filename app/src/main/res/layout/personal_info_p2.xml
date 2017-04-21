@@ -272,10 +272,19 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btn_previous"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/inputFields"
+                android:text="Previous"/>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="32dp"
                 android:layout_below="@id/inputFields"
                 android:text="Submit"/>
 
