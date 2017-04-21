@@ -41,128 +41,10 @@
                     android:orientation="vertical"
                     android:layout_weight="0.13"
                     android:background="#00ffffff">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Last Name:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="First Name:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Middle Name:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                                                android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Nickname:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                                                android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Address:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                                                android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Birthday:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                                                android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Age:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                                                android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Gender:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                                                android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-
-                        android:layout_below="@id/personalInfo"
-                        android:text="Religion:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="32dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_below="@id/personalInfo"
-                        android:text="Citizenship:"
-                        android:textSize="@dimen/abc_text_size_medium_material"
-                        android:textIsSelectable="false"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:paddingLeft="8dp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                                                android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -174,7 +56,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -186,7 +68,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -198,7 +80,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -210,7 +92,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -222,7 +104,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -234,7 +116,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -246,7 +128,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -258,7 +140,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -270,7 +152,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                                                android:layout_height="32dp"
+                        android:layout_height="32dp"
                         android:layout_marginTop="24dp"
 
                         android:layout_below="@id/personalInfo"
@@ -291,95 +173,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_weight="0.87">
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_marginTop="8dp"
-
-                        android:textSize="@dimen/abc_text_size_small_material"
-                        android:textColor="@color/abc_primary_text_material_dark"
-                        android:background="#19ffffff" />
 
                     <EditText
                         android:layout_width="match_parent"

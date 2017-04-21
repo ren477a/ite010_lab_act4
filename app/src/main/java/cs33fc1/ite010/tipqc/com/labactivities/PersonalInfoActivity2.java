@@ -3,10 +3,12 @@ package cs33fc1.ite010.tipqc.com.labactivities;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class PersonalInfoActivity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.personal_info_p2);
     }
+    
 }

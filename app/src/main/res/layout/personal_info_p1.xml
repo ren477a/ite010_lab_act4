@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background_material_dark">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="32dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:id="@+id/personalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="32dp"
+                android:layout_centerHorizontal="true"
+                android:text="PERSONAL INFORMATION"
+                android:textStyle="bold"
+                android:textSize="@dimen/abc_text_size_large_material"
+                android:textIsSelectable="false"
+                android:textColor="@color/abc_primary_text_material_dark" />
+
+            <LinearLayout
+                android:id="@+id/inputFields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/personalInfo"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.13"
+                    android:background="#00ffffff">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Last Name:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="First Name:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Middle Name:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                                                android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Nickname:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                                                android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Address:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                                                android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Birthday:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                                                android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Age:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                                                android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Gender:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                                                android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+
+                        android:layout_below="@id/personalInfo"
+                        android:text="Religion:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_below="@id/personalInfo"
+                        android:text="Citizenship:"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textIsSelectable="false"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:paddingLeft="8dp" />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.87">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="8dp"
+
+                        android:textSize="@dimen/abc_text_size_small_material"
+                        android:textColor="@color/abc_primary_text_material_dark"
+                        android:background="#19ffffff" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/inputFields"
+                android:text="Next"/>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
