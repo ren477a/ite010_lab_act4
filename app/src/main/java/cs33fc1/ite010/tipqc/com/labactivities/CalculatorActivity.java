@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Stack;
+
 public class CalculatorActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button[] btn;
@@ -21,15 +23,16 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
 
     private String display;
 
-    private double ans, num1, num2;
-    private char op;
+    private Stack<Double> stack;
+    private int op;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
 
-        clear();
+        stack = new Stack<Double>();
+        op = NONE;
 
         btn = new Button[10];
 
@@ -60,61 +63,78 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         btnClear.setOnClickListener(this);
 
         txt = (EditText) findViewById(R.id.editText);
+        clear();
 
         for (int i = 0; i < btn.length; i++) {
             final int x = i;
             btn[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(display.equals("0")) {
-                        display = Integer.toString(x);
+                    if(txt.getText().toString().equals("0")) {
+                        txt.setText(Integer.toString(x));
                     } else {
-                        display = display + x;
+                        txt.setText(txt.getText().toString() + x);
                     }
-                    txt.setText(display);
                 }
             });
         }
 
     }
 
-    private boolean asd = true;
+    final int ADD = 9827;
+    final int SUBTRACT = 522234;
+    final int MULTIPLY = 12532;
+    final int DIVIDE = 54387513;
+    final int NONE = 5315;
 
     @Override
     public void onClick(View v) {
-        if(v.equals(btnAdd)) {
-            if(asd)
-                num1 = Double.parseDouble(txt.getText().toString());
-        } else if(v.equals(btnSubtract)) {
-            display = display + "-";
-            txt.setText(display);
 
-        } else if(v.equals(btnMultiply)) {
-            display = display + "*";
-            txt.setText(display);
+            if(v.equals(btnAdd)) {
+                if(stack.empty()) {
+                    stack.push(Double.parseDouble(txt.getText().toString()));
+                    op = ADD;
+                    clear();
+                } else {
+                    Double d1 = stack.pop();
+                    Double d2 = Double.parseDouble(txt.getText().toString());
+                    txt.setText(Double.toString(d1+d2));
+                    stack.push(Double.parseDouble(txt.getText().toString()));
+                }
 
-        } else if(v.equals(btnDivide)) {
-            display = display + "/";
-            txt.setText(display);
-        } else if(v.equals(btnEquals)) {
 
-        } else if(v.equals(btnPeriod)) {
-            System.out.println("period");
-            if(!display.contains(".")) {
-                display = display + ".";
-                txt.setText(display);
+            } else if(v.equals(btnSubtract)) {
+
+            } else if(v.equals(btnMultiply)) {
+
+            } else if(v.equals(btnDivide)) {
+
+            } else if(v.equals(btnEquals)) {
+                if(!stack.empty()) {
+                    double d1 = stack.pop();
+                    double d2 = Double.parseDouble(txt.getText().toString());
+                    if(op == ADD)
+                        txt.setText(Double.toString(d1+d2));
+                    op = NONE;
+                }
+            } else if(v.equals(btnPeriod)) {
+                System.out.println("period");
+                if(!display.contains(".")) {
+                    display = display + ".";
+                    txt.setText(display);
+                }
+            } else if(v.equals(btnClear)) {
+                clear();
+                op = NONE;
+                stack.clear();
             }
-        } else if(v.equals(btnClear)) {
-            display = "";
-            txt.setText(display);
-        }
+
+
     }
 
 
     private void clear() {
         display = "0";
         txt.setText(display);
-        num1 = 0;
-        num2 = 0;
     }
 }
