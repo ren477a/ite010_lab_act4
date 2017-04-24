@@ -24,7 +24,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     private String display;
 
     private Stack<Double> stack;
-    private int op;
+    private Stack<Integer> op;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
         setContentView(R.layout.activity_calculator);
 
         stack = new Stack<Double>();
-        op = NONE;
+        op = new Stack<Integer>();
 
         btn = new Button[10];
 
@@ -70,11 +70,18 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
             btn[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(txt.getText().toString().equals("0")) {
+                    if(!hasNewNum) {
                         txt.setText(Integer.toString(x));
+                        hasNewNum = true;
                     } else {
-                        txt.setText(txt.getText().toString() + x);
+                        if(txt.getText().toString().equals("0")) {
+                            txt.setText(Integer.toString(x));
+                        } else {
+                            txt.setText(txt.getText().toString() + x);
+                        }
                     }
+
+
                 }
             });
         }
@@ -86,46 +93,131 @@ public class CalculatorActivity extends AppCompatActivity implements View.OnClic
     final int MULTIPLY = 12532;
     final int DIVIDE = 54387513;
     final int NONE = 5315;
+    boolean hasNewNum = false;
 
     @Override
     public void onClick(View v) {
-
             if(v.equals(btnAdd)) {
                 if(stack.empty()) {
                     stack.push(Double.parseDouble(txt.getText().toString()));
-                    op = ADD;
-                    clear();
+                    op.push(ADD);
+                    hasNewNum = false;
                 } else {
+                    if(op.peek()!=ADD) {
+                        op.pop();
+                        op.push(ADD);
+                    } else {
+                        if(hasNewNum) {
+                            Double d1 = stack.pop();
+                            Double d2 = Double.parseDouble(txt.getText().toString());
+                            txt.setText(Double.toString(d1+d2));
+                            op.clear();
+                            stack.push(Double.parseDouble(txt.getText().toString()));
+                            op.push(ADD);
+                            hasNewNum = false;
+                        }
+                    }
+                }
+            } else if(v.equals(btnSubtract)) {
+                if(stack.empty()) {
+                    stack.push(Double.parseDouble(txt.getText().toString()));
+                    op.push(SUBTRACT);
+                    hasNewNum = false;
+                } else {
+                    if(op.peek()!=SUBTRACT) {
+                        op.pop();
+                        op.push(SUBTRACT);
+                    } else {
+                        if(hasNewNum) {
+                            Double d1 = stack.pop();
+                            Double d2 = Double.parseDouble(txt.getText().toString());
+                            txt.setText(Double.toString(d1-d2));
+                            op.clear();
+                            stack.push(Double.parseDouble(txt.getText().toString()));
+                            op.push(SUBTRACT);
+                            hasNewNum = false;
+                        }
+                    }
+                }
+            } else if(v.equals(btnMultiply)) {
+                if(stack.empty()) {
+                    stack.push(Double.parseDouble(txt.getText().toString()));
+                    op.push(MULTIPLY);
+                    hasNewNum = false;
+                } else {
+                    if(op.peek()!=MULTIPLY) {
+                        op.pop();
+                        op.push(MULTIPLY);
+                    } else {
+                        if(hasNewNum) {
+                            Double d1 = stack.pop();
+                            Double d2 = Double.parseDouble(txt.getText().toString());
+                            txt.setText(Double.toString(d1*d2));
+                            op.clear();
+                            stack.push(Double.parseDouble(txt.getText().toString()));
+                            op.push(MULTIPLY);
+                            hasNewNum = false;
+                        }
+                    }
+                }
+            } else if(v.equals(btnDivide)) {
+                if(stack.empty()) {
+                    stack.push(Double.parseDouble(txt.getText().toString()));
+                    op.push(DIVIDE);
+                    hasNewNum = false;
+                } else {
+                    if(op.peek()!=DIVIDE) {
+                        op.pop();
+                        op.push(DIVIDE);
+                    } else {
+                        if(hasNewNum) {
+                            Double d1 = stack.pop();
+                            Double d2 = Double.parseDouble(txt.getText().toString());
+                            txt.setText(Double.toString(d1/d2));
+                            op.clear();
+                            stack.push(Double.parseDouble(txt.getText().toString()));
+                            op.push(DIVIDE);
+                            hasNewNum = false;
+                        }
+                    }
+                }
+            } else if(v.equals(btnEquals)) {
+                if(hasNewNum && !op.empty()) {
                     Double d1 = stack.pop();
                     Double d2 = Double.parseDouble(txt.getText().toString());
-                    txt.setText(Double.toString(d1+d2));
-                    stack.push(Double.parseDouble(txt.getText().toString()));
-                }
-
-
-            } else if(v.equals(btnSubtract)) {
-
-            } else if(v.equals(btnMultiply)) {
-
-            } else if(v.equals(btnDivide)) {
-
-            } else if(v.equals(btnEquals)) {
-                if(!stack.empty()) {
-                    double d1 = stack.pop();
-                    double d2 = Double.parseDouble(txt.getText().toString());
-                    if(op == ADD)
+                    int opr = op.pop();
+                    if(opr == ADD)
                         txt.setText(Double.toString(d1+d2));
-                    op = NONE;
+                    else if(opr == SUBTRACT)
+                        txt.setText(Double.toString(d1-d2));
+                    else if(opr == MULTIPLY)
+                        txt.setText(Double.toString(d1*d2));
+                    else if(opr == DIVIDE)
+                        txt.setText(Double.toString(d1/d2));
+                    stack.clear();
+                    op.clear();
+                    hasNewNum = false;
                 }
             } else if(v.equals(btnPeriod)) {
-                System.out.println("period");
+
+
+
+                display = txt.getText().toString();
                 if(!display.contains(".")) {
-                    display = display + ".";
-                    txt.setText(display);
+                    if(!hasNewNum) {
+                        txt.setText(".");
+                        hasNewNum = true;
+                    } else {
+                        if(txt.getText().toString().equals("0")) {
+                            txt.setText(".");
+                        } else {
+                            txt.setText(txt.getText().toString() + ".");
+                        }
+                    }
                 }
             } else if(v.equals(btnClear)) {
                 clear();
-                op = NONE;
+                op.clear();
                 stack.clear();
             }
 
