@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText user, pass;
-    private Button btnLogin;
+    private Button btnLogin, btnClear;
     private final String USERNAME = "admin";
     private final String PASSWORD = "ITE010";
 
@@ -23,15 +23,24 @@ public class LoginActivity extends AppCompatActivity {
         pass = (EditText) findViewById(R.id.pass);
 
         btnLogin = (Button) findViewById(R.id.btn_login);
+        btnClear = (Button) findViewById(R.id.btn_login_clear);
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(user.getText().toString().toLowerCase().equals(USERNAME)
                         && pass.getText().toString().equals(PASSWORD)) {
-                    System.out.println("Login Successful");
+                    //Login successful
                     launchPA1();
                 }
+            }
+        });
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user.setText("");
+                pass.setText("");
             }
         });
     }
